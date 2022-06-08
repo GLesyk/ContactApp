@@ -1,3 +1,8 @@
+import {Router} from "./router.js";
+
+const router = new Router();
+router.init();
+
 const abonentList = [
 {
 	avatar: 'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg',
@@ -22,7 +27,6 @@ const abonentList = [
 ];
 const liseRow = document.getElementById('full_abonent_list');
 const textToFind = document.getElementById('textToFind');
-
 
 function seachKontakt(kontaktList){
 	liseRow.innerHTML = '';
@@ -56,40 +60,18 @@ textToFind.addEventListener('keyup', function(e){
 		else {
 			seachKontakt(abonentList);
 		}
-	
-
-
 })
-const btnAddNew = document.getElementById('AddNew');
-const btnBackMainPage = document.getElementById('btnBackMainPage');
+
+document.querySelectorAll('[data-route-action]').forEach(element => {
+    element.addEventListener('click', e => {
+        router.locate(e.target.getAttribute('data-route-action'));
+    })
+});
+
+
 const btnAdd = document.getElementById('btnAdd');
-const btnBackCreatePage = document.getElementById('btnBackCreatePage');
-const btnSave = document.getElementById('btnSave');
-const mainPage = document.getElementById('main_page');
-const createPage = document.getElementById('create_page');
-const editPage = document.getElementById('edit_page');
 const userName = document.getElementById('userName');
 const userPhone = document.getElementById('userPhone');
-
-btnAddNew.addEventListener('click', function(){
-		mainPage.classList.toggle ('disabled'),
-		createPage.classList.toggle ('disabled');
-
-});
-btnBackMainPage.addEventListener('click', function(){
-	if (mainPage.classList.contains('disabled')) {
-		
-		mainPage.classList.remove('disabled'),
-		createPage.classList.add('disabled');
-	}
-});
-btnBackCreatePage.addEventListener('click', function(){
-	if (createPage.classList.contains('disabled')) {
-		createPage.classList.remove('disabled');
-		editPage.classList.add('disabled');
-
-	}
-});
 
 btnAdd.addEventListener('click', function(){
 	let name = userName.value;
@@ -103,8 +85,7 @@ btnAdd.addEventListener('click', function(){
 		phone: phone,
 	}
 	abonentList.push(contact);
-	mainPage.classList.toggle ('disabled'),
-	createPage.classList.toggle ('disabled');
+	router.locate();
 	seachKontakt(abonentList);
 } )
 
