@@ -1,11 +1,11 @@
 const abonentList = [
 {
-	avatar: 'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg',
+	avatar: 'https://i.pinimg.com/originals/64/17/ef/6417ef82395842c3a2b4a1dfd9356ee6.jpg',
 	name: 'Ivan',
 	phone: '9379992',
 },
 {
-	avatar: 'https://pickaface.net/gallery/avatar/unr_random_160817_0304_2mvqp69.png',
+	avatar: 'https://cspromogame.ru//storage/upload_images/avatars/3981.jpg',
 	name: 'Petya',
 	phone: '9379992',
 },
