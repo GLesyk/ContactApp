@@ -10,12 +10,12 @@ const abonentList = [
 	phone: '9379992',
 },
 {
-	avatar: 'https://yt3.ggpht.com/ytc/AKedOLTlGVLrXzgZDwItF-m8Tux0NF5II9C-TIa6HgIalg=s900-c-k-c0x00ffffff-no-rj',
+	avatar: 'https://cspromogame.ru//storage/upload_images/avatars/1299.jpg',
 	name: 'Pavlo',
 	phone: '9379992',
 },
 {
-	avatar: 'https://yt3.ggpht.com/ytc/AKedOLTlGVLrXzgZDwItF-m8Tux0NF5II9C-TIa6HgIalg=s900-c-k-c0x00ffffff-no-rj',
+	avatar: 'https://cspromogame.ru//storage/upload_images/avatars/1299.jpg',
 	name: 'Alexander',
 	phone: '937999289647',
 },
