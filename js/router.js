@@ -47,7 +47,7 @@ export class Router {
 
     locate(page) {
 
-        if(page.length === 0)
+        if( ! page)
         {
             this.setRoute(this.default);
             this.processLocate();
